@@ -4,11 +4,16 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { FaLinkedin, FaGithub, FaBars  } from 'react-icons/fa';
 
 const Navbar = () => {
+
+    const toggleHome = () => {
+        scroll.scrollToTop()
+    }
+
     return (
         <Wrapper>
             <div className="nav-container">
                 <div className="nav-header">
-                    <h3>Brian Sahota</h3>
+                    <h3 onClick={toggleHome}>Brian Sahota</h3>
                     <button className="nav-toggle">
                         <FaBars />
                     </button>
@@ -77,6 +82,7 @@ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     letter-spacing: 0.2rem;
     font-size: 20px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .nav-toggle {
@@ -98,7 +104,7 @@ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
 @media screen and (min-width: 800px) {
     .nav-container {
-        max-width: 1170px;
+        max-width: 1480px;
         height: 80px;
         margin: 0 auto;
         display: flex;
@@ -110,7 +116,7 @@ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: --22px;
+        padding-right: 3.75rem;
     }
 
     .nav-header {
