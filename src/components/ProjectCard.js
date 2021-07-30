@@ -71,8 +71,6 @@ img {
 
 @media (min-width: 992px) {
 
-margin-bottom: 2rem;
-
 article{
     max-width: 1050px;
     margin: 0 auto;

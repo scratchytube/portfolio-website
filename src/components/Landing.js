@@ -6,8 +6,12 @@ const Landing = () => {
     return (
         <Wrapper id='home'>
             <div className="header-container">
-                <img src={me} alt="mee" />
-                <p>UI | UX Web Developer</p>
+                <div className="image">
+                    <img src={me} alt="mee" />
+                </div>
+                <div className="landing-text">
+                    <p>UI | UX Web Developer</p>
+                </div>
             </div>
         </Wrapper>
     )
