@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Portfolio = () => {
     return (
         <Wrapper id='portfolio'>
-
+                
         </Wrapper>
     )
 }
