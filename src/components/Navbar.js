@@ -70,6 +70,7 @@ position: sticky;
 top: 0;
 width: 100%;
 height: 80px;
+margin-top: -80px;
 background-color: #fafafa;
 z-index: 1;
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -116,7 +117,7 @@ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-right: 3.75rem;
+        padding-right: 8.25rem;
     }
 
     .nav-header {
