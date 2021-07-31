@@ -69,7 +69,11 @@ img {
     margin-top: 50px;
 }
 
-@media (min-width: 992px) {
+/* @media (max-width: 576px) {
+
+} */
+
+@media (min-width: 660px) {
 
 article{
     max-width: 1050px;
@@ -81,8 +85,9 @@ article{
 img {
     width: 100%;
     display: block;
-    width: 1050px;
-    height: 700px;
+    margin: 0 auto;
+    width: 800px;
+    height: 500px;
     border-radius: 1%;
     object-fit: cover;
 }
@@ -101,6 +106,30 @@ h4 {
     letter-spacing: 0.2em;
     padding-top: 2rem;
     font-size: 2em;
+}
+
+@media (max-width: 836px) {
+    img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    height: 400px;
+    border-radius: 1%;
+    object-fit: cover;
+}
+}
+
+@media (min-width: 1080px) {
+    img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 1050px;
+    height: 700px;
+    border-radius: 1%;
+    object-fit: cover;
+}
 }
 
 `

@@ -10,7 +10,8 @@ const Landing = () => {
                     <img src={me} alt="mee" />
                 </div>
                 <div className="landing-text">
-                    <p>UI | UX Web Developer</p>
+                    <p>Software Developer</p>
+                    <p>Brooklyn, NY</p>
                 </div>
             </div>
         </Wrapper>
@@ -47,12 +48,11 @@ img {
     }
 
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 660px) {
 img {
     margin: 0 auto;
     height: 550px;
     width: 500px;
-    /* padding-top: 75px; */
     }
 }
 
