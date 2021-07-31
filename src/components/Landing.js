@@ -47,13 +47,26 @@ img {
     width: 275px;
     }
 
-
-@media screen and (min-width: 660px) {
+    @media screen and (min-width: 660px) {
 img {
     margin: 0 auto;
     height: 550px;
-    width: 500px;
+        width: 500px;
+    
     }
 }
+
+    @media screen and (max-width: 834px) {
+    img {
+        margin: 0 auto;
+        height: 350px;
+    width: 275px;
+        
+        
+        }
+    }
+
+
+
 
 `
