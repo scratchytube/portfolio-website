@@ -51,7 +51,7 @@ img {
 img {
     margin: 0 auto;
     height: 550px;
-        width: 500px;
+    width: 500px;
     
     }
 }

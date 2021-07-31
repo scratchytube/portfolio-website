@@ -69,10 +69,6 @@ img {
     margin-top: 50px;
 }
 
-/* @media (max-width: 576px) {
-
-} */
-
 @media (min-width: 660px) {
 
 article{
