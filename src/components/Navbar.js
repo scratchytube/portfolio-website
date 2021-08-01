@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FaLinkedin, FaGithub, FaBars  } from 'react-icons/fa';
 
-const Navbar = () => {
+const Navbar = ({ handleToggle }) => {
 
     const toggleHome = () => {
         scroll.scrollToTop()
@@ -14,7 +14,7 @@ const Navbar = () => {
             <div className="nav-container">
                 <div className="nav-header">
                     <h3 onClick={toggleHome}>Brian Sahota</h3>
-                    <button className="nav-toggle">
+                    <button onClick={handleToggle} className="nav-toggle">
                         <FaBars />
                     </button>
                 </div>
