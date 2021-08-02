@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ProjectCard = ({pj}) => {
+    const { name, description, image, github, live } = pj
 
     const openInNewTab = (url) => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
         if (newWindow) newWindow.opener = null
       }
 
-    const { name, description, image, github, live } = pj
     return (
         <Wrapper>
             <hr />
@@ -54,6 +54,7 @@ p {
     margin-bottom: 1rem;
     font-size: 0.90rem;
     font-weight: 200;
+    padding-top: 20px;
 }
 
 h4 {
