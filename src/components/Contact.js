@@ -23,19 +23,18 @@ const Contact = () => {
                 </div>
                 <div className="right">
                     <h3>Would love to hear from you</h3>
-                    <form 
-                    action="https://formsubmit.io/send/bpsahota@gmail.com" 
-                    method="POST" onSubmit={handleSubmit} 
+                    <form method="POST" data-netlify='true' 
+                    onSubmit={handleSubmit} 
                     className='contact-form'
                     >
                         <label>Name</label>
                         <input value={name} onChange={(e) => setName(e.target.value)} className='input-field' type="text" name='name' required/>
 
                         <label>Email</label>
-                        <input value={email} onChange={(e) => setEmail(e.target.value)} className='input-field' type="text" name='subject' required />
+                        <input name='email' value={email} onChange={(e) => setEmail(e.target.value)} className='input-field' type="text" required />
 
                         <label>Message</label>
-                        <textarea value={message} onChange={(e) => setMessage(e.target.value)} className='input-field' name="message"></textarea>
+                        <textarea  value={message} onChange={(e) => setMessage(e.target.value)} className='input-field' name="message"></textarea>
 
                         <input className='submit-btn' type="submit" value='Send it' />
                     </form>
