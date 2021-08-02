@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import shake from '../assets/shake.svg'
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
 
@@ -8,13 +9,29 @@ const Contact = () => {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        alert("Thanks i'll get back to you")
-        setName('')
-        setEmail('')
-        setMessage('')
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('gmail', 'template_zcns3vp', e.target, 'user_RivvlSzG6qbfHmVPLRlFv')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          alert("Thanks i'll get back to you")
+            setName('')
+            setEmail('')
+            setMessage('')
+          
     }
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     alert("Thanks i'll get back to you")
+    //     setName('')
+    //     setEmail('')
+    //     setMessage('')
+    // }
 
     return (
         <Wrapper id='contact'>
@@ -24,9 +41,7 @@ const Contact = () => {
                 </div>
                 <div className="right">
                     <h3>Would love to hear from you</h3>
-                    <form name='contact' method="POST" data-netlify='true' 
-                    onSubmit={handleSubmit} 
-                    className='contact-form'
+                    <form onSubmit={sendEmail} className='contact-form'
                     >
                         <label>Name</label>
                         <input value={name} onChange={(e) => setName(e.target.value)} className='input-field' type="text" name='name' required/>
