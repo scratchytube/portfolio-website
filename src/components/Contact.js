@@ -15,6 +15,7 @@ const Contact = () => {
         setEmail('')
         setMessage('')
     }
+
     return (
         <Wrapper id='contact'>
              <div className="main-container">
@@ -23,7 +24,7 @@ const Contact = () => {
                 </div>
                 <div className="right">
                     <h3>Would love to hear from you</h3>
-                    <form method="POST" data-netlify='true' 
+                    <form name='contact' method="POST" data-netlify='true' 
                     onSubmit={handleSubmit} 
                     className='contact-form'
                     >
