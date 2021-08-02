@@ -54,15 +54,8 @@ width: 100%;
 background-color: #C26868;
 color: #fafafa;
 
-.main-container {
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    grid-column-gap: 14px;
-}
-
 .left {
-    padding-top: 90px;
+    display: none;
 }
 
 h3 {
@@ -106,5 +99,20 @@ h3 {
     color: #fff;
     background-color: black;
     border: none;
+}
+
+@media (min-width: 992px) {
+
+    .main-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    grid-column-gap: 14px;
+}
+
+    .left {
+    display: grid;
+    padding-top: 90px;
+}
 }
 `
