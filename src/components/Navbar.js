@@ -5,6 +5,11 @@ import { FaLinkedin, FaGithub, FaBars  } from 'react-icons/fa';
 
 const Navbar = ({ handleToggle }) => {
 
+    const openInNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+      }
+
     const toggleHome = () => {
         scroll.scrollToTop()
     }
@@ -22,7 +27,7 @@ const Navbar = ({ handleToggle }) => {
                     <ul className="links">
                         <NavLink to='portfolio' 
                             spy={true} smooth={true}
-                            offset={-80}duration={700}
+                            offset={-80} duration={700}
                             >Projects</NavLink>
 
                             <NavLink to='about'
@@ -37,11 +42,13 @@ const Navbar = ({ handleToggle }) => {
                     </ul>
                 </div>
                 <ul className='social-icons'>
-                    <li>
-                        <a href="https://github.com/scratchytube"><FaGithub /></a>
+                    <li onClick={() => openInNewTab("https://github.com/scratchytube")}>
+                        <FaGithub />
+                        {/* <a href="https://github.com/scratchytube"><FaGithub /></a> */}
                     </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/bsahota"><FaLinkedin /></a>
+                    <li onClick={() => openInNewTab("https://www.linkedin.com/in/bsahota")}>
+                        <FaLinkedin />
+                        {/* <a href="https://www.linkedin.com/in/bsahota"><FaLinkedin /></a> */}
                     </li>
                 </ul>
             </div>
@@ -136,10 +143,10 @@ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         font-size: 20px;
     }
 
-    .social-icons a {
+    .social-icons li {
         color: black;
         margin: 0 0.5rem;
-        
+        cursor: pointer;
     }
 
 }

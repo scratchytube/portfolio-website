@@ -11,13 +11,13 @@ const Sidebar = ({ isOpen, handleToggle }) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to='portfolio' onClick={handleToggle}>
+                    <SidebarLink to='portfolio' offset={-80} onClick={handleToggle}>
                         Portfolio
                     </SidebarLink>
-                    <SidebarLink to='about' onClick={handleToggle}>
+                    <SidebarLink to='about' offset={-80} onClick={handleToggle}>
                         About
                     </SidebarLink>
-                    <SidebarLink to='contact' onClick={handleToggle}>
+                    <SidebarLink to='contact' offset={-80} onClick={handleToggle}>
                         Contact
                     </SidebarLink>
                 </SidebarMenu>

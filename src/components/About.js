@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import avatar from '../assets/avadar.png'
+import avatar from '../assets/avadar-3.png'
 
 const About = () => {
     return (
