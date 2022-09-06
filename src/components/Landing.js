@@ -7,7 +7,7 @@ const Landing = () => {
         <Wrapper id='home'>
             <div className="header-container">
                 <div className="image">
-                    <img src={me} alt="mee" />
+                    <img src={me} alt="man behind computer" />
                 </div>
                 <div className="landing-text">
                     <p>Software Developer</p>
@@ -21,8 +21,9 @@ const Landing = () => {
 export default Landing
 
 const Wrapper = styled.div`
-height: 100vh;
+height: 100%;
 width: 100%;
+padding-top: 2rem;
 background-color: #445D7B;
 display: flex;
 align-items: center;
@@ -33,6 +34,7 @@ p {
     font-size: 1.75rem;
     color: #fff;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -45,6 +47,7 @@ img {
     margin: 0 auto;
     height: 350px;
     width: 275px;
+    padding-top: 2rem;
     }
 
     @media screen and (min-width: 660px) {
@@ -58,9 +61,9 @@ img {
 
     @media screen and (max-width: 834px) {
     img {
-        margin: 0 auto;
-        height: 350px;
-    width: 275px;
+      margin: 0 auto;
+      height: 350px;
+      width: 275px;
         
         
         }
