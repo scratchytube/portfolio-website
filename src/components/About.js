@@ -4,17 +4,32 @@ import avatar from '../assets/avadar-3.png'
 
 const About = () => {
     return (
-        <Wrapper id='about'>
-            <div className="img">
-                <img src={avatar} alt="avatar" />
-            </div>
-            <div className="me">
-                <p>Hey i'm Brian. Born and raised in Queens NY to two immigrant parents I realized the value of hard work at an early age. I had to forgo higher education to enter the workforce and have worked for many excellent companies such as the NBA and Rolex USA. When Covid-19 came to NYC I decided to make the best of my time in quarantine, and attended Flatirons super intensive bootcamp. During my bootcamp journey I've crossed paths with brilliant instructors, a welcoming tech community and talented colleagues who continue to inspire me to this day.</p>
+      <Wrapper id="about">
+        <div className="img">
+          <img src={avatar} alt="avatar" />
+        </div>
+        <div className="me">
+          <p>
+            Hey, I'm Brian. Born and raised in Queens NY to two immigrant
+            parents, I realized the value of hard work at an early age. I had to
+            forgo higher education to enter the workforce and have been lucky
+            enough to work for some great companies such as the NBA and Rolex
+            USA. When Covid-19 came to NYC, I decided to make the best of my
+            time in quarantine and attended Flatiron's super intensive bootcamp.
+            During my bootcamp journey I've crossed paths with brilliant
+            instructors, a welcoming tech community and talented colleagues who
+            continue to inspire me every day.
+          </p>
 
-                <p>Now as a software engineer, I've continued to push myself post-graduation by collaborating on projects with other engineers, learning new technologies and by sharpening my existing skills. Holler at me.</p>
-            </div>
-        </Wrapper>
-    )
+          <p>
+            Now as a software engineer, i've continued to push myself
+            post-graduation by collaborating on projects with other engineers,
+            learning new technologies and sharpening my existing skills. Holler
+            at me.
+          </p>
+        </div>
+      </Wrapper>
+    );
 }
 
 export default About
