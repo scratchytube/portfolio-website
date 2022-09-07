@@ -1,47 +1,51 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-const ProjectCard = ({pj}) => {
-    const { name, description, image, github, live } = pj
+const ProjectCard = ({ pj }) => {
+  const { name, description, image, github, live, stack } = pj
 
-    const openInNewTab = (url) => {
-        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-        if (newWindow) newWindow.opener = null
-      }
+  const mappedStack = stack.map((s, index) => {
+    return <li className="stack-item" key={index}>{s}</li>;
+  })
 
-    return (
-        <Wrapper>
-            <hr />
-            <article>
-                    <img src={image} alt={name} />
-                    <h4>{name}</h4>
-                    <p>{description}</p>
-                    <div className="stack">
-                        {/* <p>{thisStack}</p> */}
-                    </div>
-                    <div className="pj-buttons">
-                        <button onClick={() => openInNewTab(github)} className='btn'>
-                            Github
-                        </button>
-                        <button onClick={() => openInNewTab(live)} className='btn'>
-                            Live
-                        </button>
-                    </div>
-            </article>
-        </Wrapper>
-    )
-}
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
 
-export default ProjectCard
+  return (
+    <Wrapper>
+      <hr />
+      <article>
+        <img src={image} alt={name} />
+        <h4>{name}</h4>
+        <p>{description}</p>
+        <div>
+          <ul className="stack">{mappedStack}</ul>
+        </div>
+        <div className="pj-buttons">
+          {github ? (
+            <button onClick={() => openInNewTab(github)} className="btn">
+              Github
+            </button>
+          ) : null}
+          <button onClick={() => openInNewTab(live)} className="btn">
+            Live
+          </button>
+        </div>
+      </article>
+    </Wrapper>
+  );
+};
+
+export default ProjectCard;
 
 const Wrapper = styled.section`
-height: 100%;
 width: 100%;
 display: grid;
 row-gap: 3rem;
 
 article {
-    max-width: 300px;
     margin-top: 50px;
     margin: 0 auto;
     margin-bottom: 4rem;
@@ -50,9 +54,8 @@ article {
 
 p {
     text-align: center;
-    letter-spacing: 0.2em
+    letter-spacing: 0.3em
     margin-bottom: 1rem;
-    font-size: 0.90rem;
     font-weight: 200;
     padding-top: 20px;
 }
@@ -67,11 +70,11 @@ h4 {
 
 img {
     width: 100%;
+    margin: 0 auto;
     display: block;
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    font-weight: 700;
+    max-width: 400px;
+    max-height: 500px;
+    object-fit: contain;
 }
 
 button {
@@ -79,8 +82,23 @@ text-decoration: none;
 color: black;
 }
 
+.stack {
+  width: fit-content;
+  margin-left: 50px;
+  column-gap: 50px;
+  padding-top: 20px;
+  text-transform: capitalize;
+  letter-spacing: 0.2em;
+  font-weight: 200;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.stack-item {
+  width: fit-content;
+}
+
 .btn {
-    font-size: 20px;
+  font-size: 20px;
   font-weight: 200;
   letter-spacing: 1px;
   padding: 13px 50px 13px;
@@ -97,7 +115,6 @@ color: black;
   width: 100%;
   z-index: -1;
   position: absolute;
-  height: 100%;
   top: 7px;
   left: 7px;
   transition: 0.2s;
@@ -114,6 +131,7 @@ color: black;
     width: 50%;
     margin: 0 auto;
     margin-top: 50px;
+    font-weight: 200;
 }
 
 @media (min-width: 660px) {
@@ -125,14 +143,26 @@ article{
     margin-top: 50px;
 }
 
+.stack {
+  display: flex;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+  letter-spacing: 0.2em;
+  font-weight: 200;
+  margin-left: 0;
+  padding-left: 40px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
 img {
     width: 100%;
-    display: block;
+    
     margin: 0 auto;
-    width: 800px;
-    height: 500px;
+    max-width: 800px;
+    max-height: 500px;
     border-radius: 1%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 p {
@@ -151,7 +181,7 @@ h4 {
     font-size: 2em;
 }
 
-@media (max-width: 836px) {
+/* @media (max-width: 836px) {
     img {
     width: 100%;
     display: block;
@@ -161,18 +191,18 @@ h4 {
     border-radius: 1%;
     object-fit: cover;
 }
-}
+} */
 
 @media (min-width: 1080px) {
     img {
     width: 100%;
     display: block;
     margin: 0 auto;
-    width: 1050px;
-    height: 700px;
+    max-width: 1050px;
+    max-height: 700px;
     border-radius: 1%;
     object-fit: cover;
 }
 }
 
-`
+`;
