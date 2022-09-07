@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const ProjectCard = ({ pj }) => {
-  const { name, description, image, github, live, stack } = pj
+  const { name, image, github, live, stack } = pj
 
   const mappedStack = stack.map((s, index) => {
     return <li className="stack-item" key={index}>{s}</li>;
@@ -19,7 +19,6 @@ const ProjectCard = ({ pj }) => {
       <article>
         <img src={image} alt={name} />
         <h4>{name}</h4>
-        <p>{description}</p>
         <div>
           <ul className="stack">{mappedStack}</ul>
         </div>
@@ -101,6 +100,7 @@ color: black;
   font-size: 20px;
   font-weight: 200;
   letter-spacing: 1px;
+  border-radius: 5px;
   padding: 13px 50px 13px;
   outline: 0;
   border: 1px solid black;
@@ -123,6 +123,12 @@ color: black;
 .btn:hover::after {
   top: 0px;
   left: 0px;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #445D7B;
+  transition: all 0.5s;
 }
 
 .pj-buttons {
@@ -181,17 +187,6 @@ h4 {
     font-size: 2em;
 }
 
-/* @media (max-width: 836px) {
-    img {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    width: 600px;
-    height: 400px;
-    border-radius: 1%;
-    object-fit: cover;
-}
-} */
 
 @media (min-width: 1080px) {
     img {
