@@ -3,7 +3,7 @@
 export const projects = [
   {
     id: 1,
-    name: "Drink Ami Ami",
+    name: "Ami Ami",
     description:
       "My first solo project with Progress Labs and my third overall with the company.",
     image: "https://i.imgur.com/mokG6aK.png",
@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     id: 3,
-    name: "Drink Libby",
+    name: "Libby",
     description:
       "My first shopify website for Progress Labs. I learned shopfy api, the shopify cms, and how to inject vue instances into liquid shopify sections.",
     image: "https://i.imgur.com/UxNTRsZ.png",
