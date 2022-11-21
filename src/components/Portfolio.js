@@ -8,8 +8,6 @@ const Portfolio = () => {
     const myProjects = projects.map((pj, index) => (
       <ProjectCard key={index} pj={pj} />
     ))
-  
-  console.log(myProjects)
 
     return (
         <Wrapper id='portfolio'>

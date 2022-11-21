@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const ProjectCard = ({ pj }) => {
-  const { name, image, github, live, stack } = pj
+  const { name, image, github, live, stack, description } = pj;
 
   const mappedStack = stack.map((s, index) => {
     return <li className="stack-item" key={index}>{s}</li>;
@@ -19,6 +19,7 @@ const ProjectCard = ({ pj }) => {
       <article>
         <img src={image} alt={name} />
         <h4>{name}</h4>
+        <p>{description}</p>
         <div>
           <ul className="stack">{mappedStack}</ul>
         </div>
